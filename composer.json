@@ -18,6 +18,6 @@
     "phpunit/phpunit": "@stable"
   },
   "autoload": {
-    "psr-4": { "DuugWork\\" : "src/DuugWork" }
+    "psr-4": { "DuugWork\\" : "src" }
   }
 }
