@@ -41,10 +41,11 @@ class SendCurl
      * @param $url
      * @param array $conteudo
      * @param string $metodo
+     * @param bool $jsonDecode
      * ----------------------------------------------------------------------------
      * @return array $response
      */
-    public function resquest($url, $conteudo, $metodo = "POST", $jsonDecode = false)
+    public function resquest($url, $conteudo, $metodo = "POST", $jsonDecode = true)
     {
         // Inicia o curl
         $curl = curl_init();
@@ -73,7 +74,7 @@ class SendCurl
         if($jsonDecode == true)
         {
             // Decodifica
-            $response = json_decode($jsonDecode);
+            $response = json_decode($response);
         }
 
         // Retorna o resultado
