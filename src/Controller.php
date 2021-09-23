@@ -88,7 +88,7 @@ class Controller
         if(!empty($view))
         {
             // Exibe a View
-            include("./app/views/" . $view . ".php");
+            include("./views/" . $view . ".php");
         }
 
     } // END >> Fun::view()
