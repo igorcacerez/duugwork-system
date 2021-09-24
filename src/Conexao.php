@@ -22,7 +22,11 @@ class Conexao
         $database = null;
 
         // Inclui os arquivos
-        require("./app/config/database.php");
+        if(is_file("./app/config/database.php")){
+            require("./app/config/database.php");
+        } else {
+            require("/var/www/global/config/database.php");
+        }
 
         // Add os dados do banco a variavel
         $this->database = $database;
